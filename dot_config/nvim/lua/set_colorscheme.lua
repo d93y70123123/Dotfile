@@ -1,4 +1,4 @@
--- define your colorscheme here
+-- Switch your colorscheme here
 local colorscheme = 'catppuccin'
 
 local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

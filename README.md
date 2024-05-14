@@ -1,5 +1,7 @@
 # Dotfile 管理
 
+[[toc]]
+
 ## 什麼是 Dotfile
 
 1. Dotfile 是指在 Unix-like 系統中，檔名以 `.` 開頭的檔案，例如 `.bashrc`、`.zshrc`、`.vimrc` 等等。
@@ -8,7 +10,9 @@
 ## Dotfile 管理工具
 
 1. [GNU Stow](https://www.gnu.org/software/stow/)
+    自動建立符號連結，將 Dotfile 放在特定目錄下，通常放在 `~/dotfile` ，再使用 Stow 將 Dotfile 軟連結到使用者目錄下。
 2. [CHEZMOI](https://www.chezmoi.io/)
+    將檔案複製到特定目錄下，通常放在 `~/.local/share/chezmoi` ，再使用 Chezmoi 管理 Dotfile。
 
 ## Dotfile 管理範例
 
@@ -21,86 +25,93 @@
 5. `.p10k.zsh`
 6. `zshrc`
 
-
 管理方式：使用 Chezmoi 管理 Dotfile
 
 1. 安裝 Chezmoi
 
-```bash
-brew install chezmoi
-```
+    ```bash
+    brew install chezmoi
+    ```
 
 2. 初始化 Chezmoi
 
-```bash
-chezmoi init
-```
+    ```bash
+    chezmoi init
+    ```
 
 3. 設定 Git Repository
 
-```bash
-chezmoi cd
-git init
-git remote add origin
-```
+    ```bash
+    chezmoi cd
+    git init
+    git remote add origin
+    ```
 
 4. 設定 Dotfile
 
-```bash
-chezmoi add ~/.vimrc
-chezmoi add ~/.tmux.conf
-chezmoi add ~/.config/nvim
-chezmoi add ~/Brewfile
-chezmoi add ~/.p10k.zsh
-chezmoi add ~/.zshrc
-```
+    ```bash
+    chezmoi add ~/.vimrc
+    chezmoi add ~/.tmux.conf
+    chezmoi add ~/.config/nvim
+    chezmoi add ~/Brewfile
+    chezmoi add ~/.p10k.zsh
+    chezmoi add ~/.zshrc
+    ```
 
 5. Commit Dotfile
 
-```bash
-chezmoi cd
-git add .
-git commit -m "Initial commit"
-git push origin master
-```
-
-6. 更新 Dotfile
-
-```bash
-chezmoi update
-```
-
-7. 恢復 Dotfile
-
-```bash
-chezmoi diff
-chezmoi apply
-```
+    ```bash
+    chezmoi cd # 切換到 會自動進入到 chezmoi 的目錄
+    git add .
+    git commit -m "Initial commit"
+    git push origin master
+    ```
 
 ## 遷移到新的機器
 
+在新的機器上，只需要安裝 Chezmoi，然後 Clone Dotfile Repository 即可。
+
+需求：
+
+1. 安裝 Homebrew
+2. 安裝 Git
+3. 安裝 Chezmoi
+
+步驟：
+
 1. 安裝 Chezmoi
 
-```bash
-brew install chezmoi
-```
+    ```bash
+    brew install chezmoi
+    ```
 
 2. Clone Dotfile Repository
 
-```bash
-chezmoi init --apply <repository>
-```
+    ```bash
+    chezmoi init --apply <repository>
+    ```
 
 3. 更新 Dotfile
+    使用前注意有沒有會覆蓋掉的東西
+    或是可以使用 4. 的方式，手動恢復 Dotfile
 
-```bash
-chezmoi update
-```
+    ```bash
+    自動將 pull 下來的 Dotfile 恢復到使用者目錄下。
+
+    ```bash
+    chezmoi update
+    ```
 
 4. 恢復 Dotfile
 
-```bash
-chezmoi diff
-chezmoi apply
-```
+    ```bash
+    chezmoi diff
+    chezmoi apply
+    ```
 
+## 參考資料
+
+1. [Dotfile](https://wiki.archlinux.org/index.php/Dotfiles)
+2. [Chezmoi](https://www.chezmoi.io/quick-start/)
+3. [GNU Stow](https://www.gnu.org/software/stow/)
+4. [Chezmoi：優雅管理Linux的dotfile，使用Git儲存庫備份，類似GNU Stow](https://ivonblog.com/posts/chezmoi-manage-dotfiles/)
