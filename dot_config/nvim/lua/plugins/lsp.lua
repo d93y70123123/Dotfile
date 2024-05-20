@@ -22,24 +22,24 @@ return {
 				},
 			})
 
-			local tools_to_install = {
-				"stylua",
-				"prettierd",
-				"eslint_d",
-				"typescript-language-server",
-        "markdownlint",
-        "marksman",
-			}
-
-			local mason_registry = require("mason-registry")
-			for _, tool in ipairs(tools_to_install) do
-				if not mason_registry.is_installed(tool) then
-					mason_registry.get_package(tool):install()
-					print("Installing " .. tool .. " for the first time...")
-				else
-					--print(tool .. " is already installed. No need to install again.")
-				end
-			end
+--			local tools_to_install = {
+--				"stylua",
+--				"prettierd",
+--				"eslint_d",
+--				"typescript-language-server",
+--        "markdownlint",
+--        "marksman",
+--			}
+--
+--			local mason_registry = require("mason-registry")
+--			for _, tool in ipairs(tools_to_install) do
+--				if not mason_registry.is_installed(tool) then
+--					mason_registry.get_package(tool):install()
+--					print("Installing " .. tool .. " for the first time...")
+--				else
+--					--print(tool .. " is already installed. No need to install again.")
+--				end
+--			end
 		end,
 	},
 
@@ -47,9 +47,19 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
-		opts = {
-			auto_install = true,
-		},
+    config = function()
+       -- 指定需要安裝的 LSP 伺服器
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+          "pyright",
+        },
+         -- 自動安裝未安裝的 LSP 伺服器
+				automatic_installation = true,
+			})
+		end,
+--		opts = {
+--			auto_install = true,
+--		},
 
 		--    config = function()
 		--      require("mason-lspconfig").setup({
