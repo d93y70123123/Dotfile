@@ -1,7 +1,5 @@
 # Dotfile 管理
 
-[[toc]]
-
 ## 什麼是 Dotfile
 
 1. Dotfile 是指在 Unix-like 系統中，檔名以 `.` 開頭的檔案，例如 `.bashrc`、`.zshrc`、`.vimrc` 等等。
@@ -96,9 +94,6 @@
     或是可以使用 4. 的方式，手動恢復 Dotfile
 
     ```bash
-    自動將 pull 下來的 Dotfile 恢復到使用者目錄下。
-
-    ```bash
     chezmoi update
     ```
 
@@ -108,6 +103,48 @@
     chezmoi diff
     chezmoi apply
     ```
+
+## 日常操作
+
+1. 刪除已添加的 Dotfile
+
+    ```bash
+    chezmoi forget ~/.vimrc
+    ```
+
+2. 修改 Source Dotfile
+
+    除了直接修改 `~/.vimrc` 之外，也可以使用 Chezmoi 來修改。
+
+    ```bash
+    chezmoi edit ~/.vimrc
+    ```
+
+3. 確認 Source 與 Target 的差異
+
+    ```bash
+    chezmoi diff
+    ```
+
+4. 重新添加 Dotfile
+
+    如果手動修改了 Dotfile，可以使用 `re-add` 重新添加。
+
+    ```bash
+    chezmoi re-add ~/.vimrc
+    ```
+
+## 問題排查
+
+問題1：修改配置後，會出現錯誤
+
+  `chezmoi: warning: config file template has changed, run chezmoi init to regenerate config file`
+
+解決方法：重新初始化 Chezmoi
+
+```bash
+chezmoi init
+```
 
 ## 參考資料
 

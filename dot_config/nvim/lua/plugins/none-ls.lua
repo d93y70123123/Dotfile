@@ -21,7 +21,7 @@ return {
 					}),
 					--require("none-ls.diagnostics.eslint_d"),
 					-- create formmter and diagnostics for eslint and prettier
-					require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
+					require("none-ls.diagnostics.eslint_d"), -- requires none-ls-extras.nvim
 				},
 			})
 		end,
