@@ -52,6 +52,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
           "pyright",
+          "groovyls",
         },
          -- 自動安裝未安裝的 LSP 伺服器
 				automatic_installation = true,

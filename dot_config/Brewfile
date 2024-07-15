@@ -8,18 +8,26 @@ brew "chezmoi"
 brew "fd"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Kubernetes package manager
+brew "helm"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Tools for zmodem/xmodem/ymodem file transfer
 brew "lrzsz"
 # Powerful, lightweight programming language
 brew "lua"
+# Platform built on V8 to build network applications
+brew "node"
+# Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
+brew "marp-cli"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
-# Platform built on V8 to build network applications
-brew "node"
 # Development kit for the Java programming language
 brew "openjdk@11"
 # SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
@@ -32,22 +40,26 @@ brew "podman"
 brew "qemu"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Internet file retriever
 brew "wget"
 # Audio utility
 cask "background-music"
-# Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
-# Developer targeted fonts with a high number of glyphs
 cask "font-sauce-code-pro-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Archive manager for data compression and backups
 cask "rar"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Rime input method engine
 cask "squirrel"
 # System monitor for the menu bar

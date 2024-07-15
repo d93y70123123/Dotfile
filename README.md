@@ -134,11 +134,28 @@
     chezmoi re-add ~/.vimrc
     ```
 
+    或是全部重新添加
+
+    ```bash
+    chezmoi update
+    ```
+
+```bash
+chezmoi add ~/.config/nvim
+chezmoi add ~/.tmux.conf
+chezmoi add ~/.vimrc
+chezmoi add ~/.zshrc
+chezmoi add ~/.p10k.zsh
+
+brew bundle dump --describe --force
+chezmoi add ~/.config/Brewfile
+```
+
 ## 問題排查
 
 問題1：修改配置後，會出現錯誤
 
-  `chezmoi: warning: config file template has changed, run chezmoi init to regenerate config file`
+`chezmoi: warning: config file template has changed, run chezmoi init to regenerate config file`
 
 解決方法：重新初始化 Chezmoi
 

@@ -14,6 +14,9 @@ lspconfig.html.setup({
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
 })
+lspconfig.groovyls.setup {
+  capabilities = capabilities,
+}
 
 lspconfig.pyright.setup ({
   settings = {

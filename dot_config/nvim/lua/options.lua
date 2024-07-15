@@ -26,3 +26,13 @@ vim.opt.smartcase = true -- but make it case sensitive if an uppercase is entere
 vim.opt.splitbelow = true -- open new vertical split bottom
 vim.opt.splitright = true -- open new horizontal splits right
 
+-- Groovy specific settings
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "groovy",
+  callback = function()
+    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = 4
+    vim.bo.softtabstop = 4
+    vim.bo.expandtab = true
+  end,
+})

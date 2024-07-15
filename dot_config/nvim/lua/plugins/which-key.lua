@@ -15,7 +15,7 @@ return {
         ["fg"] = { "<cmd>Telescope live_grep<cr>", "grep 尋找" },
         ["ca"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "LSP code_action" },
         ["o"] = { "<cmd>Neotree toggle filesystem reveal left<cr>", "顯示工作目錄" },
-        ["gh"] = { "<cmd>lua vim.lsp.buf.format()<cr>", "格式化文件" },
+        ["gh"] = { "<cmd>lua vim.lsp.buf.format({ timeout_ms = 5000 })<cr>", "格式化文件" },
         ["rn"] = { "<cmd>lua vim.lsp.buf.rename()<cr>", "快速修改" },
         ["rc"] = { "<cmd>QuickRun<cr>", "執行程式" },
         -- add copilot keymap for which-key
