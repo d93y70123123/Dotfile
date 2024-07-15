@@ -106,6 +106,22 @@
 
 ## 日常操作
 
+1. 目前測試重新加入就可以了
+
+```bash
+chezmoi add ~/.config/nvim
+chezmoi add ~/.tmux.conf
+chezmoi add ~/.vimrc
+chezmoi add ~/.zshrc
+chezmoi add ~/.p10k.zsh
+
+# 更新 Brewfile
+brew bundle dump --describe --force
+chezmoi add ~/.config/Brewfile
+```
+
+以下先省略
+
 1. 刪除已添加的 Dotfile
 
     ```bash
@@ -139,17 +155,6 @@
     ```bash
     chezmoi update
     ```
-
-```bash
-chezmoi add ~/.config/nvim
-chezmoi add ~/.tmux.conf
-chezmoi add ~/.vimrc
-chezmoi add ~/.zshrc
-chezmoi add ~/.p10k.zsh
-
-brew bundle dump --describe --force
-chezmoi add ~/.config/Brewfile
-```
 
 ## 問題排查
 
