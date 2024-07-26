@@ -116,8 +116,17 @@ chezmoi add ~/.zshrc
 chezmoi add ~/.p10k.zsh
 
 # 更新 Brewfile
+cd ~/.config
 brew bundle dump --describe --force
 chezmoi add ~/.config/Brewfile
+
+# 同步 Github
+
+chezmoi cd
+git status
+git add .
+git commit
+git push origin master
 ```
 
 以下先省略
