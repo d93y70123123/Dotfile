@@ -2,6 +2,8 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "maaassistantarknights/tap"
+# Core application library for C
+brew "glib"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Simple, fast and user-friendly alternative to find
@@ -10,6 +12,8 @@ brew "fd"
 brew "gnutls"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Kubernetes package manager
@@ -24,6 +28,10 @@ brew "lua"
 brew "node"
 # Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
 brew "marp-cli"
+# MongoDB Shell to connect, configure, query, and work with your MongoDB database
+brew "mongosh"
+# Open source relational database management system
+brew "mysql"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Port scanning utility for large networks

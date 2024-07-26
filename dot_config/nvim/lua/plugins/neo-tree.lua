@@ -10,7 +10,7 @@ return {
 		},
 		config = function()
 			require("neo-tree").setup({
-				--close_if_last_window = true,  -- 如果 neo-tree 是最后一个窗口，则关闭
+				close_if_last_window = true,  -- 如果 neo-tree 是最后一个窗口，则关闭
 				default_component_configs = {
 					indent = {
 						with_expanders = true,

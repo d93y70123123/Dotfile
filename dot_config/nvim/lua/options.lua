@@ -1,7 +1,7 @@
 -- Hint: use `:h <option>` to figure out the meaning if needed
-vim.opt.clipboard = 'unnamedplus' -- use system clipboard
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-vim.opt.mouse = '' -- If need it, add 'a'. allow the mouse to be used in Nvim
+vim.opt.clipboard = "unnamedplus" -- use system clipboard
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
+vim.opt.mouse = "" -- If need it, add 'a'. allow the mouse to be used in Nvim
 
 -- Tab
 vim.opt.tabstop = 2 -- number of visual spaces per TAB
@@ -28,11 +28,23 @@ vim.opt.splitright = true -- open new horizontal splits right
 
 -- Groovy specific settings
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "groovy",
-  callback = function()
-    vim.bo.tabstop = 4
-    vim.bo.shiftwidth = 4
-    vim.bo.softtabstop = 4
-    vim.bo.expandtab = true
-  end,
+	pattern = "groovy",
+	callback = function()
+		vim.bo.tabstop = 4
+		vim.bo.shiftwidth = 4
+		vim.bo.softtabstop = 4
+		vim.bo.expandtab = true
+	end,
 })
+
+-- enable termugui colors
+vim.opt.termguicolors = true
+
+-- set font
+vim.opt.guifont = "Sauce Code Pro Nerd Font Mono:h14"
+
+-- Tmux navigation
+vim.keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})
+vim.keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", {})
+vim.keymap.set("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", {})
+vim.keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", {})

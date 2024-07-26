@@ -1,3 +1,4 @@
+-- 模糊搜尋
 return {
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',

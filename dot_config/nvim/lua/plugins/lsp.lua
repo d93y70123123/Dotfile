@@ -53,6 +53,7 @@ return {
 				ensure_installed = {
           "pyright",
           "groovyls",
+          "sqlls",
         },
          -- 自動安裝未安裝的 LSP 伺服器
 				automatic_installation = true,

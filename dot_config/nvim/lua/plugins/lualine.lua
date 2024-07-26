@@ -1,3 +1,4 @@
+-- 美化下方工具狀態列
 return{
     {
         'nvim-lualine/lualine.nvim',
@@ -5,7 +6,7 @@ return{
         config = function ()
             require('lualine').setup({
                 options = {
-                theme = 'dracula'
+                theme = 'catppuccin'
                 }
             })
         end

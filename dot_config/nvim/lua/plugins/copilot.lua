@@ -19,6 +19,8 @@
 --end
 
 -- 配置表，包括插件和快捷键设置
+--
+-- Copilot 的工具
 return {
   {
     "github/copilot.vim",

@@ -30,7 +30,7 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping.complete(),
 		-- Use <CR>(Enter) to confirm selection
 		-- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
---		["<CR>"] = cmp.mapping.confirm({ select = true }),
+		--		["<CR>"] = cmp.mapping.confirm({ select = true }),
 
 		-- A super tab
 		-- sourc: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
@@ -65,9 +65,10 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" }, -- For luasnip users.
-	}, {
+		--}, {
 		{ name = "buffer" },
 	}),
+
 	--{ name = "path" }, -- For path completion
 	-- Let's configure the item's appearance
 	-- source: https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance
@@ -90,3 +91,12 @@ cmp.setup({
 	--	end,
 	--},
 })
+
+-- for vim-dadbod
+cmp.setup.filetype({ "mysql" }, {
+	sources = {
+		{ name = "vim-dadbod-completion" },
+		{ name = "buffer" },
+	},
+})
+

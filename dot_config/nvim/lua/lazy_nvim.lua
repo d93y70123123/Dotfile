@@ -12,11 +12,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- 安裝外掛
 local opts = {
+  -- 關閉重新載入外掛的通知
 	change_detection = {
 		notify = false,
 	},
 }
 
+-- 模組化設定檔的開頭
 require("lazy").setup("plugins", opts)

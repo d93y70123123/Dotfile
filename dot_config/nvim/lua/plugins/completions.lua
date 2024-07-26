@@ -1,3 +1,4 @@
+-- 設定自動補全的外掛
 return {
 	-- Code snippet engine
 	{
@@ -8,7 +9,7 @@ return {
 			"L3MON4D3/LuaSnip",
 		},
 		build = "make install_jsregexp",
-        -- 看這邊才知道重新安裝就好了。 https://github.com/L3MON4D3/LuaSnip/issues/1071
+		-- 看這邊才知道重新安裝就好了。 https://github.com/L3MON4D3/LuaSnip/issues/1071
 	},
 	-- Auto-completion engine
 	{
