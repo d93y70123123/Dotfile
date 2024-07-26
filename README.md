@@ -126,7 +126,7 @@ chezmoi cd
 git status
 git add .
 git commit
-git push origin master
+git push
 ```
 
 以下先省略
