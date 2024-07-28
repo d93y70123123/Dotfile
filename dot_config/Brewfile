@@ -74,3 +74,5 @@ cask "squirrel"
 cask "stats"
 # Free and open-source OpenVPN client
 cask "tunnelblick"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"

@@ -13,7 +13,7 @@ vim.opt.expandtab = true -- tabs are spaces, mainly because of python
 vim.opt.number = true -- show absolute number
 vim.opt.relativenumber = false -- add numbers to each line on the left side
 vim.opt.cursorline = true -- highlight cursor line underneath the cursor horizontally
--- vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
+vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
 vim.opt.showmode = false -- we are experienced, wo don't need the "-- INSERT --" mode hint
 
 -- Searching
@@ -36,9 +36,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.bo.expandtab = true
 	end,
 })
-
--- enable termugui colors
-vim.opt.termguicolors = true
 
 -- set font
 vim.opt.guifont = "Sauce Code Pro Nerd Font Mono:h14"

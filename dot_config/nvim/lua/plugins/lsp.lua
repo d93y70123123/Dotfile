@@ -4,7 +4,6 @@ return {
 		"onsails/lspkind.nvim",
 		event = "VimEnter",
 		config = function()
-			-- 可以在这里配置 lspkind 的特定选项
 		end,
 	},
 
@@ -59,26 +58,13 @@ return {
 				automatic_installation = true,
 			})
 		end,
---		opts = {
---			auto_install = true,
---		},
-
-		--    config = function()
-		--      require("mason-lspconfig").setup({
-		--        -- A list of servers to automatically install if they're not already installed
-		--        ensure_installed = {
-		--          "lua_ls",
-		--          "tsserver",
-		--        },
-		--      })
-		--    end,
 	},
 
 	-- Neovim's native LSP configuration
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			require("config.lsp")
+			require("config.lsp.init")
 		end,
 	},
 }
