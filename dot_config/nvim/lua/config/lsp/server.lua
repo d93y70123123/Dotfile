@@ -11,6 +11,7 @@ local lsp_servers = {
   "groovyls",
   "sqlls",
   "pyright",
+  "marksman",
 }
 
 for _, lsp in ipairs(lsp_servers) do
