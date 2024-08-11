@@ -10,21 +10,16 @@ return {
 		},
 		config = function()
 			require("neo-tree").setup({
-				close_if_last_window = true,  -- 如果 neo-tree 是最后一个窗口，则关闭
+				close_if_last_window = true, -- 如果 neo-tree 是最后一个窗口，则关闭
 				default_component_configs = {
 					indent = {
 						with_expanders = true,
 					},
 					icon = {
-						-- 有用的
 						folder_closed = "",
 						folder_open = "",
-						folder_empty = "",
-						-- 沒有用的
-						folder_empty_open = "",
-						folder_empty_close = "",
-						folder_symlink = "",
-						folder_symlink_open = "",
+            folder_empty = "󰷏",
+						--folder_empty = "󰉖",
 						-- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
 						-- then these will never be used.
 						default = "*",
