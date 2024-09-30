@@ -24,12 +24,18 @@ vim.keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", opts)
 vim.keymap.set("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", opts)
 vim.keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", opts)
 
+-- Vim navigation
+vim.keymap.set("n", "<M-up>", ":resize +2<CR>", { silent = true })
+vim.keymap.set("n", "<M-down>", ":resize -2<CR>", { silent = true })
+vim.keymap.set("n", "<M-left>", ":vertical resize +2<CR>", { silent = true })
+vim.keymap.set("n", "<M-right>", ":vertical resize -2<CR>", { silent = true })
+
 -- for vim-test
-vim.keymap.set("n", "<leader>t", ":TestNearest<CR>", {})
-vim.keymap.set("n", "<leader>T", ":TestFile<CR>", {})
-vim.keymap.set("n", "<leader>a", ":TestSuite<CR>", {})
-vim.keymap.set("n", "<leader>l", ":TestLast<CR>", {})
-vim.keymap.set("n", "<leader>g", ":TestVisit<CR>", {})
+--vim.keymap.set("n", "<leader>t", ":TestNearest<CR>", {})
+--vim.keymap.set("n", "<leader>T", ":TestFile<CR>", {})
+--vim.keymap.set("n", "<leader>a", ":TestSuite<CR>", {})
+--vim.keymap.set("n", "<leader>l", ":TestLast<CR>", {})
+--vim.keymap.set("n", "<leader>g", ":TestVisit<CR>", {})
 
 -- 關閉 Noice 的通知
 vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "關閉通知" })

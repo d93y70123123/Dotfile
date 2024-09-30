@@ -19,11 +19,11 @@ return {
 					}),
 					null_ls.builtins.diagnostics.markdownlint.with({
 						filetypes = { "markdown", "pandoc" },
-						extra_args = {
+						--[[ extra_args = {
 							"--stdin",
 							"--rules",
 							'{ "MD013": { "line_length": 80, "code_blocks": false } }',
-						},
+						}, ]]
 					}),
 					null_ls.builtins.formatting.npm_groovy_lint.with({
 						filetypes = { "groovy" },
