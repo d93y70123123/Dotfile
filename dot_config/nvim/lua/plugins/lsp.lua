@@ -53,8 +53,9 @@ return {
           "groovyls",
           "sqlls",
           "lua_ls",
-          "tsserver",
+          "ts_ls",
           "marksman",
+          "gopls",
         },
         -- 自動安裝未安裝的 LSP 伺服器
         automatic_installation = true,
@@ -71,6 +72,7 @@ return {
           "stylua",
           "prettierd",
           "markdownlint",
+          "sql-formatter",
         },
       })
     end,

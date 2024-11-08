@@ -12,7 +12,7 @@ return {
 				debug = true,
 				sources = {
 					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.completion.spell,
+--[[ 					null_ls.builtins.completion.spell, ]]
 					null_ls.builtins.formatting.prettierd,
 					null_ls.builtins.formatting.markdownlint.with({
 						filetypes = { "markdown", "pandoc" },
@@ -30,6 +30,10 @@ return {
 					}),
 					null_ls.builtins.diagnostics.npm_groovy_lint.with({
 						filetypes = { "groovy" },
+					}),
+					null_ls.builtins.formatting.sql_formatter.with({
+						filetypes = { "sql" },
+            debug = true,
 					}),
 					-- create formmter and diagnostics for eslint and prettier
 					require("none-ls.diagnostics.eslint_d"), -- requires none-ls-extras.nvim

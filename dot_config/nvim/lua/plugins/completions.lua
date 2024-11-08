@@ -21,6 +21,7 @@ return {
 			--  "hrsh7th/cmp-path", -- path auto-completion
 			--  "hrsh7th/cmp-cmdline", -- cmdline auto-completion
 		},
+
 		config = function()
 			require("config.nvim-cmp")
 		end,
