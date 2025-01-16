@@ -66,6 +66,9 @@ vim.keymap.set("n", "<leader><space>", "<cmd>nohlsearch<cr>", { desc = "取消�
 vim.keymap.set("n", "<leader>bn", "<cmd>bn<CR>", { desc = "切換到下個分頁" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bp<CR>", { desc = "切換到上個分頁" })
 
+--kubectl 相關
+vim.keymap.set("n", "<leader>k", '<cmd>lua require("kubectl").toggle()<cr>', { noremap = true, silent = true, desc = "Kubectl 管理" })
+
 -----------------
 -- Visual mode --
 -----------------
